@@ -1,0 +1,4 @@
+Despues de perder los avances que se tenia del proyecto, se decide hacer un repositoria en github
+viendo las virtudes de realizar esta practipa para evitar detalles como el anterior mensionado.
+
+se realiza cambios en la parte del la classe en archivo drone.py 
