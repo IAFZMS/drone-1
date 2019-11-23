@@ -8,7 +8,9 @@ CAMARA_CHOICES = [
     ('I', 'INCLUIDA'),
     ('NI', 'NO INCLUIDA')
 ]
-
+TIPO_MOTOR=[
+    ('E', 'ELECTRICO'),
+    ('M', 'COMBUSTIÓN')]
 
 class Dron(models.Model):
     Tipo_de_dron= models.CharField(max_length=400, null=False, blank=False,default="----",choices=TIPO_CHOICES)
@@ -17,9 +19,13 @@ class Dron(models.Model):
     distancia = models.CharField(max_length=400, null=False, blank=False, default="")
     costo = models.CharField(max_length=400, null=False, blank=False, default="")
     camara_dron=models.CharField(max_length=400, null=False, blank=False,default="",choices=CAMARA_CHOICES)
+    tipo_motor=models.CharField(max_length=400, null=False, blank=False,default="",choices=TIPO_MOTOR)
+    numero_de_motores= models.CharField(max_length=400, null=False, blank=False, default="")
+
+
 
     def __str__(self):
-        return "Modelo: {}".format(self.modelo, self.año, self.autonomia, self.distancia, self.costo)
+        return "{}".format(self.modelo, self.autonomia, self.distancia, self.costo)
 
 class camara(models.Model):
     Sensor = models.CharField(max_length=400, null=False, blank=False)
@@ -30,3 +36,4 @@ class camara(models.Model):
     Velocidad_obturacion= models.CharField(max_length=400, null=False, blank=False, default="")
     def __str__(self):
         return "Sensor:{} Calidad:{} Objetivo: {} Resolucion: {} Rango Iso:{} Velocidad de obturación:{}".format(self.Sensor, self.Calidad, self.Objetivo, self.Resolucion, self.Rango_ISO, self.Velocidad_obturacion)
+
