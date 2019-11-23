@@ -20,7 +20,7 @@ class Dron(models.Model):
     costo = models.CharField(max_length=400, null=False, blank=False, default="")
     camara_dron=models.CharField(max_length=400, null=False, blank=False,default="",choices=CAMARA_CHOICES)
     tipo_motor=models.CharField(max_length=400, null=False, blank=False,default="",choices=TIPO_MOTOR)
-    numero_de_motores= models.CharField(max_length=400, null=False, blank=False, default="")
+    numero_motores= models.CharField(max_length=400, null=False, blank=False, default="")
 
 
 
