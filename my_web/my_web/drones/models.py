@@ -35,5 +35,5 @@ class camara(models.Model):
     Rango_ISO= models.CharField(max_length=400, null=False, blank=False, default="")
     Velocidad_obturacion= models.CharField(max_length=400, null=False, blank=False, default="")
     def __str__(self):
-        return "Sensor:{} Calidad:{} Objetivo: {} Resolucion: {} Rango Iso:{} Velocidad de obturación:{}".format(self.Sensor, self.Calidad, self.Objetivo, self.Resolucion, self.Rango_ISO, self.Velocidad_obturacion)
+        return "{}".format(self.Sensor, self.Calidad, self.Objetivo, self.Resolucion, self.Rango_ISO, self.Velocidad_obturacion)
 
